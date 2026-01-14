@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Solitaire</title>
+    <link rel="stylesheet" href="pasjansa.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="title">SOLITAIRE</h1>
+
+        <div class="controls-bar">
+            <button id="newBtn" class="new-game-btn">NOVA IGRA</button>
+            
+            <div class="status-box">
+                <div class="move-count">Št. potez: <span id="moveCount">0</span></div>
+                <div class="status-text" id="status">Nova igra!</div>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="top-row">
+                <div class="stock-waste">
+                    <div class="pile card-slot" id="stock">
+                        <div class="empty-label">STOCK</div>
+                    </div>
+                    <div class="pile card-slot" id="waste"></div>
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="foundations" id="foundations">
+                    <div class="pile foundation-slot" data-idx="0">
+                        <div class="empty-label">F1</div>
+                    </div>
+                    <div class="pile foundation-slot" data-idx="1">
+                        <div class="empty-label">F2</div>
+                    </div>
+                    <div class="pile foundation-slot" data-idx="2">
+                        <div class="empty-label">F3</div>
+                    </div>
+                    <div class="pile foundation-slot" data-idx="3">
+                        <div class="empty-label">F4</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tableau" id="tableau"></div>
+        </div>
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <div class="victory-title">ZMAGA!!!</div>
+        <div class="final-moves">Št. potez: <span id="finalMoves">0</span></div>
+        <button onclick="newGame()" class="play-again-btn">IGRAJ PONOVNO</button>
+    </div>
+
+    <script src="pasjansa.js"></script>
+</body>
+</html>
